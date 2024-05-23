@@ -2,6 +2,8 @@
 const form = document.querySelector('#form');
 const username = document.querySelector('#username');
 const email = document.querySelector('#email');
+const CNIC = document.querySelector('#CNIC');
+const  age = document.querySelector('#age');
 const password = document.querySelector('.password');
 const  ConfirmPassword = document.querySelector('.password');
 
@@ -11,6 +13,15 @@ let passwordRegex = /^(?=.*[A-Z])(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$/;
 let cnicRegex = /^42\d{5}-\d{7}-\d{1}$/;
 let ageRegex = /^(1[89]|[2-5]\d|60)$/;
 
+form.addEventListener('submit' , (event)=>{
+    event.preventDefault()
+    console.log(username.value)
+    console.log(CNIC.value)
+    console.log(age.value)
+    console.log(email.value)
+    console.log(password.value)
+    console.log(ConfirmPassword.value)
+})
 
 
 

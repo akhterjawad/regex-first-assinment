@@ -32,6 +32,7 @@ button{
 }
 input{
     display: block;
+    color: #848688 !important;
     margin: 20px auto !important;
     margin-bottom: 2% !important;
     /* height:  !important; */

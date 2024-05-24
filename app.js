@@ -5,22 +5,43 @@ const email = document.querySelector('#email');
 const CNIC = document.querySelector('#CNIC');
 const  age = document.querySelector('#age');
 const password = document.querySelector('.password');
-const  ConfirmPassword = document.querySelector('.password');
+const  ConfirmPassword = document.querySelector('.Cpassword');
 
 let usernameRegex = /^[a-zA-Z0-9_]{4,15}$/;
 let emailRegex = /^(?=.*[A-Z])(?=.*[!@#$%^&*])[^\s@]{1,64}@[^\s@]+\.[^\s@]+$/;
 let passwordRegex = /^(?=.*[A-Z])(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$/;
-let cnicRegex = /^42\d{5}-\d{7}-\d{1}$/;
+let CNICRegex = /^42\d{11}$/;
 let ageRegex = /^(1[89]|[2-5]\d|60)$/;
 
 form.addEventListener('submit' , (event)=>{
     event.preventDefault()
-    console.log(username.value)
-    console.log(CNIC.value)
-    console.log(age.value)
-    console.log(email.value)
-    console.log(password.value)
-    console.log(ConfirmPassword.value)
+    // console.log(username.value)
+    // console.log(CNIC.value)
+    // console.log(age.value)
+    // console.log(email.value)
+    // console.log(password.value)
+    // console.log(ConfirmPassword.value)
+
+
+if (usernameRegex.test(username.value)) {
+    console.log("true username");
+}
+if (CNICRegex.test(CNIC.value)) {
+    console.log("true CNIC");
+}
+if (ageRegex.test(age.value)) {
+    console.log("true age");
+}
+if (emailRegex.test(email.value)) {
+    console.log("true email");
+}
+if (passwordRegex.test(password.value)) {
+    console.log('Password true');
+}
+if (password.value == ConfirmPassword.value) {
+    console.log('ConfirmPassword true');
+}
+
 })
 
 
